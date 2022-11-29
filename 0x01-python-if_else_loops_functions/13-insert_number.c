@@ -1,52 +1,48 @@
 #include "lists.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <stddef.h>
-
 /**
- * *insert_node - inserts a number into a sorted linked list.
- * @head: pointer to linked list
- * @number: integer
- *
- * Return: a node or NULL.
+ * insert_node - Inserts a number into a sorted linked list.
+ * @head: Pointer to the pointer of the first node of listint_t list.
+ * @number: number to be inserted into the new node.
+ * Return: the address of the new node on success, Otherwise NULL.
  */
+
 listint_t *insert_node(listint_t **head, int number)
 {
-	listint_t *new;
-	listint_t *current = *head;
+	listint_t *tmp;
+	listint_t *new_node;
 
-
-	new = malloc(sizeof(listint_t));
-	if (!new)
+	if (head == NULL)
 		return (NULL);
-
-	new->n = number;
-	new->next = NULL;
-
+	tmp = *head;
+	new_node = malloc(sizeof(listint_t));
+	if (new_node == NULL)
+		return (NULL);
+	/*adding values to the new node*/
+	new_node->n = number;
+	new_node->next = NULL;
 	if (*head == NULL)
 	{
-		*head = new;
+		*head = new_node;
+		return (new_node);
 	}
-	else
+	/*Handling special case for first node insertion*/
+	if (tmp->n > number)
 	{
-		while (current->next != NULL)
-		{
-			if (number >= current->n && number < current->next->n)
-			{
-				new->next = current->next;
-				current->next = new;
-				return (new);
-			}
-			else if (number <= current->n && number < current->next->n)
-			{
-				new->next = current;
-				*head = new;
-				return (new);
-			}
-			current = current->next;
-		}
-		current->next = new;
+		*head = new_node;
+		new_node->next = tmp;
+		return (new_node);
 	}
-	return (new);
+	/*Traversing the linked list to find the right location for the node*/
+	while (tmp->next != NULL)
+	{
+		if (tmp->next->n > number)
+		{
+			new_node->next = tmp->next;
+			tmp->next = new_node;
+			return (new_node);
+		}
+		tmp = tmp->next;
+	}
+	tmp->next = new_node;
+	return (new_node);
 }
