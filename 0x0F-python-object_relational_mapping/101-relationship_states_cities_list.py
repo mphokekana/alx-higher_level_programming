@@ -19,4 +19,4 @@ if __name__ == "__main__":
         print(instance.id, instance.name, sep=": ")
         for city_ins in instance.cities:
             print("    ", end="")
-            print(city_ins.id, city_ins.name, sep=": "i)
+            print(city_ins.id, city_ins.name, sep=": ")
