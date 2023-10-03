@@ -9,3 +9,4 @@ def lookup(obj):
     """Function that returns the list of available attributes \
         and methods of an object"""
     return [method_name for method_name in dir(obj)]
+

@@ -13,3 +13,4 @@ def is_same_class(obj, a_class):
     if isinstance(a_class(), type(obj)):
         return True
     return False
+

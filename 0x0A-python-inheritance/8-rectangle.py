@@ -18,3 +18,4 @@ class Rectangle(BaseGeometry):
         super().integer_validator("height", height)
         self._Rectangle__width = width
         self._Rectangle__height = height
+

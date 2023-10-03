@@ -8,3 +8,4 @@ st module
                          def print_sorted(self):
                                  """Print the list, but sorted (ascending sort)"""
                                          print(sorted(self))
+
