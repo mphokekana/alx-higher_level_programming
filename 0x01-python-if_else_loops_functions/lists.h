@@ -21,4 +21,3 @@ void free_listint(listint_t *head);
 listint_t 8insert_node(listint_t **head, int number);
 
 #endif /* LISTS_H */
-
