@@ -15,4 +15,3 @@ class Student:
     def to_json(self):
         """Gets a dictionary representation of the Student"""
         return self.__dict__
-
