@@ -15,3 +15,4 @@ if __name__ == "__main__":
     s2.update(**s1_dictionary)
     print(s2)
     print(s1 == s2)
+
