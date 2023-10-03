@@ -1,2 +1,1 @@
-0x00-python-hello_world
-tirut
+# 0x00-python-hello_world
