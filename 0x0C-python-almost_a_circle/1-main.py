@@ -15,4 +15,3 @@ if __name__ == "__main__":
 
     r4 = Rectangle(2, 14)
     print(r4.id)
-

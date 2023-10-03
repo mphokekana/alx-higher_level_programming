@@ -178,4 +178,3 @@ class Rectangle(Base):
     #     for i in dict_list:
     #         dictionary[i] = getattr(self, i)
     #     return dictionary
-
