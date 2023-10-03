@@ -6,4 +6,3 @@ SELECT `title`, SUM(`rate`) AS `rating`
        ON t.`id` = r.`show_id`
  GROUP BY `title`
  ORDER BY `rating` DESC;
- 
