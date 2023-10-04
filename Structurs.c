@@ -10,3 +10,4 @@ int main()
 	int width;
 	return 0;
 }
+
