@@ -12,3 +12,4 @@ if __name__ == "__main__":
     req = request.Request(argv[1], email)
     with request.urlopen(req) as res:
         print(res.read().decode("utf8"))
+
