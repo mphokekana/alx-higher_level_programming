@@ -6,3 +6,4 @@ if (process.argv.length <= 3) {
   const second = arr.sort(function (a, b) { return b - a; })[1];
   console.log(second);
 }
+
