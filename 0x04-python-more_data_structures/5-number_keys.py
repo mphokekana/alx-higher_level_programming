@@ -7,3 +7,4 @@ def number_keys(a_dictionary):
         num += 1
 
     return (num)
+
