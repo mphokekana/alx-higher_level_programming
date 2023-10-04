@@ -77,4 +77,3 @@ def matrix_mul(m_a, m_b):
                 row_res.append(sum(list(val)))
             res.append(row_res)
         return res
-
