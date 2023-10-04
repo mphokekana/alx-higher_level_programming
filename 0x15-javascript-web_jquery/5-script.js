@@ -3,4 +3,3 @@ $(document).ready(function () {
 		$("<li>").text("Item").appendTo("ul.my_list");
 	});
 });
-

@@ -15,4 +15,3 @@ $(document).ready(function () {
 // 			$("#character").text(data.name);
 // 		});
 // });
-
